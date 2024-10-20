@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card High-Low Game</title>
+    <link rel="stylesheet" href="highlowcard-style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>High Or Low?</h1>
+        <div id="game">
+            <div class="card" id="card">0</div>
+            <div id = "mybtn">
+                <button class="button" id="high">High</button>
+                <button class="button" id="low">Low</button>
+            </div>
+            <div>
+                <input type="number" id="betAmount" placeholder="£ Bet Amount" />
+                <button class="button" id="submitBet">Place Bet</button>
+            </div>
+            <button class="button" id="start" style="display: none;">Start Game</button>
+            <div id="balance">Balance: £0</div>
+        </div>
+        <div class="alert" id="alert" style="display: none;">Sorry, You Lose!</div>
+    </div>
+    <script src="highlowcard-script.js"></script>
+</body>
+</html>

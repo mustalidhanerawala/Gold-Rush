@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap"
+        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Gold Rush</title>
+</head>
+
+<body>
+    <header>
+        <h1>Gold.Rush</h1>
+        <nav>
+            <ul>
+                <li><a href="#featured-games">Featured Games</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="featured-games">
+            <h2>Featured Games</h2>
+            <div class="game-container">
+                <div class="game-card">
+                    <h3>Game Stakemines</h3>
+                    <img src="stakeminelogo.png" alt="Game Title 1">
+                    <p class="para-desc">Stake Mines is a grid-based game where players uncover rewards while avoiding hidden mines. The challenge is to select safe tiles and cash out before hitting a mine.</p>
+                    <a href="stakemines.html" class="play-button">Play Now</a>
+                </div>
+                <div class="game-card">
+                    <h3>Slot Machine</h3>
+                    <img src="slotmachinelogo.png" alt="Game Title 2">
+                    <p class="para-desc">Experience the thrill of winning with our exciting slot machine! Spin the reels, match the symbols, and hit the jackpot, your big win is just a spin away! Play now and let the fun begin!</p>
+                    <a href="slotmachine.html" class="play-button">Play Now</a>
+                </div>
+                <div class="game-card">
+                    <h3>High Or Low ?</h3>
+                    <img src="highlowcardlogo.png" alt="Game Title 3">
+                    <p class="para-desc">Test your luck in "High or Low?" by guessing if the next card drawn will be higher or lower than the current one. Place your bets and watch as the game unfolds with each turn! If you guess correctly, your winnings increase, but make a wrong call, and its game over. Can you beat the odds and emerge victorious?</p>
+                    <a href="highlowcard.html" class="play-button">Play Now</a>
+                </div>
+                <!-- Add more game cards as needed -->
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p class="para-abtus">Welcome to <span id="head-name">Gold.Rush</span>, your premier online destination for thrilling gambling experiences! We are dedicated to providing a safe, secure, and entertaining environment for players of all skill levels. Our diverse range of games, from classic favorites to innovative new titles, ensures there's something for everyone. With a commitment to responsible gaming, exceptional customer service, and exciting promotions, we strive to create an unforgettable gaming experience that keeps you coming back for more. Join us today and let the games begin!</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="submit-form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gold Rush. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
