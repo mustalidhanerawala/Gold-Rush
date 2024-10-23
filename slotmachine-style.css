@@ -82,6 +82,10 @@ body {
   #nav2 {
       margin-top: 10px;
   }
+  #nav2 .btn
+  {
+    margin: 10px;
+  }
 }
 
 #ai-div
