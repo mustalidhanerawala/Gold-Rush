@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #FADFA1;
+    background-color: black;
 }
 
 /* Ek nawo div banayo che meiyee html ma eni css che aa */
@@ -23,8 +23,10 @@ body {
 /* Ano font google font si layo chu link head ma nakhi che */
 h1 {
     align-items: center;
+    color: goldenrod;
     font-family: Nothing You Could Do, Arial, Helvetica, sans-serif;
     justify-content: center;
+    font-weight: bold;
 }
 
 /* Yaha si mei gap create kari woh uper na 3 boxes waste */
@@ -46,8 +48,9 @@ h1 {
 .winnings,
 .amntremain,
 .info {
-    background-color: #7EACB5 !important;
-    border: 5px solid #C96868 !important;
+    background-color: lightyellow !important;
+    border: 5px solid rgb(21, 182, 21) !important;
+    color: black !important;;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -13,14 +13,13 @@ function updateBalance() {
 }
 
 function resetGame() {
-    balance = 0;
-    document.getElementById('result').innerText = '';
     document.getElementById('card').innerText = '0';
-    document.getElementById('betAmount').value = '';
-    updateBalance();
+    document.getElementById('toggleButton').disabled = true; // Disable toggle button
     document.getElementById('start').style.display = 'none'; // Hide start button
     document.getElementById('alert').style.display = 'none'; // Hide alert
     gameStarted = false;
+    document.getElementById('toggleButton').checked = false; // Reset toggle to low
+    document.getElementById('toggleLabel').innerText = "High"; // Reset label to High
 }
 
 document.getElementById('submitBet').addEventListener('click', () => {
@@ -33,47 +32,36 @@ document.getElementById('submitBet').addEventListener('click', () => {
 
     balance += betAmount;
     updateBalance();
+    document.getElementById('toggleButton').disabled = false; // Enable toggle button
     document.getElementById('start').style.display = 'inline-block'; // Show start button
 });
 
-document.getElementById('start').addEventListener('click', resetGame);
-
-document.getElementById('high').addEventListener('click', () => {
-    if (!gameStarted) {
-        currentCardValue = drawCard();
-        document.getElementById('card').innerText = currentCardValue;
-        gameStarted = true;
-    } else {
-        nextCardValue = drawCard();
-        if (nextCardValue > 0) {
-            balance += betAmount; // Player wins
-            document.getElementById('card').innerText = nextCardValue;
-        } else {
-            document.getElementById('alert').style.display = 'flex'; // Show alert
-            resetGame(); // Reset the game
-            return;
-        }
-        updateBalance();
-    }
+document.getElementById('start').addEventListener('click', () => {
+    currentCardValue = drawCard();
+    document.getElementById('card').innerText = currentCardValue;
+    gameStarted = true;
 });
 
-document.getElementById('low').addEventListener('click', () => {
-    if (!gameStarted) {
-        currentCardValue = drawCard();
-        document.getElementById('card').innerText = currentCardValue;
-        gameStarted = true;
-    } else {
+document.getElementById('toggleButton').addEventListener('change', () => {
+    if (gameStarted) {
         nextCardValue = drawCard();
-        if (nextCardValue < 0) {
+        const isHigh = document.getElementById('toggleButton').checked; // Get toggle state
+        if ((isHigh && nextCardValue > currentCardValue) || (!isHigh && nextCardValue < currentCardValue)) {
             balance += betAmount; // Player wins
-            document.getElementById('card').innerText = nextCardValue;
+            currentCardValue = nextCardValue; // Update current card value
+            document.getElementById('card').innerText = currentCardValue; // Update card display
         } else {
+            balance -= betAmount; // Player loses
             document.getElementById('alert').style.display = 'flex'; // Show alert
             resetGame(); // Reset the game
+            updateBalance();
             return;
         }
         updateBalance();
     }
+
+    // Update label based on toggle state
+    document.getElementById('toggleLabel').innerText = document.getElementById('toggleButton').checked ? "Low" : "High";
 });
 
 // Initialize the game with a balance input

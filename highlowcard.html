@@ -7,13 +7,25 @@
     <link rel="stylesheet" href="highlowcard-style.css">
 </head>
 <body>
+    <nav class="navbar">
+        <h2>Card Game</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Rules</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
     <div class="container">
         <h1>High Or Low?</h1>
         <div id="game">
             <div class="card" id="card">0</div>
-            <div id = "mybtn">
-                <button class="button" id="high">High</button>
-                <button class="button" id="low">Low</button>
+            <div id="toggleContainer">
+                <div class="toggleBox">High</div>
+                <label class="switch">
+                    <input type="checkbox" id="toggleButton" disabled>
+                    <span class="slider"></span>
+                </label>
+                <div class="toggleBox">Low</div>
             </div>
             <div>
                 <input type="number" id="betAmount" placeholder="£ Bet Amount" />
