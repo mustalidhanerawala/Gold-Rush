@@ -1,39 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap"
         rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap" rel="stylesheet">
-    <title>Slot Machine</title>
-    <link rel="stylesheet" href="slotmachine-style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <title>3D Slot Machine Reel</title>
+  <link rel="stylesheet" href="slotmachine-style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Win Big !</h1>
-        <div class="slot-machine">
-            <div class="reel" id="reel1">🍒</div>
-            <div class="reel" id="reel2">🍋</div>
-            <div class="reel" id="reel3">🍉</div>
-        </div>
-        <button id="spinButton">Spin</button>
-        <p id="result"></p>
-    </div>
+ <div id="nav">
+  <div id="nav1">
+    <ul>
+        <li><a href="#">Slots</a></li>
+        <li><a href="#">Leaderboard</a></li>
+        <li><a href="#">Promotions</a></li>
+        <li><a href="#">Help</a></li>
+    </ul>
+  </div>
+  <div id="nav2">
+    <a href="#" class="btn">Login</a>
+<a href="#" class="btn">Sign Up</a>
 
-    <!-- Custom Alert Modal -->
-    <div id="alertModal" class="modal">
-        <div class="modal-content">
-            <p id="alertMessage"></p>
-            <button id="closeAlertButton">OK</button>
-        </div>
+  </div>
+</div>
+ <div id="ai-div">
+  <div id="Heading"><h2>Win Big!</h2></div>
+  <div class="slot-machine">
+    <div class="reel-container">
+      <div class="reel" id="reel1">
+        <div class="symbol">🍒</div>
+        <div class="symbol">🔔</div>
+        <div class="symbol">💎</div>
+        <div class="symbol">🍀</div>
+        <div class="symbol">🍋</div>
+      </div>
     </div>
+    <div class="reel-container">
+      <div class="reel" id="reel2">
+        <div class="symbol">🍒</div>
+        <div class="symbol">🔔</div>
+        <div class="symbol">💎</div>
+        <div class="symbol">🍀</div>
+        <div class="symbol">🍋</div>
+      </div>
+    </div>
+    <div class="reel-container">
+      <div class="reel" id="reel3">
+        <div class="symbol">🍒</div>
+        <div class="symbol">🔔</div>
+        <div class="symbol">💎</div>
+        <div class="symbol">🍀</div>
+        <div class="symbol">🍋</div>
+      </div>
+    </div>
+  </div>
 
-    <script src="slotmachine-script.js"></script>
+  <button id="spin-button">Spin</button>
+
+ </div>
+<script src="slotmachine-script.js"></script>
 </body>
 </html>
